@@ -54,13 +54,35 @@
   padding: 8px 12px
   width: 200px
   display: block
+  overflow: hidden
+  position: relative
 
   +link(#fff)
   +norms(m)
   font-size: 18px
 
+  span:first-child
+    position: relative
+    z-index: 1
+
   &:hover
-    background: darken($acc, 3%)
+    color: $acc
+
+    .main-link-circle
+      width: 500px
+      height: 500px
+
+.main-link-circle
+  position: absolute
+
+  display: block
+  width: 0
+  height: 0
+
+  background: #fff
+  border-radius: 50%
+  transition: width 0.3s ease, height 0.3s ease
+  transform: translate(-50%, -50%)
 
 .example-videos
   display: flex
