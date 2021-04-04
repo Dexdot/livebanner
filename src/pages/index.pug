@@ -1,3 +1,32 @@
 extends ../templates/template.pug
 block content
-  p 123
+  .main-video
+    .main-video__inner
+
+  section.main
+    .main-content
+      img.main-logo(src="/assets/img/logo.svg" alt="Logo")
+      p.main-description Удобное расширение для установки анимации в качестве баннера на Twitch
+      a.main-link(href="/assets/img/logo.svg" download) Скачать
+      .example-videos
+        .example-video
+          .example-video__inner
+            iframe(width="100%" height="100%" src="https://www.youtube.com/embed/v09YBJhnJBI" title="Название видео 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+          p.example-video__title Название видео 1
+        .example-video
+          .example-video__inner
+            iframe(width="100%" height="100%" src="https://www.youtube.com/embed/v09YBJhnJBI" title="Название видео 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+          p.example-video__title Название видео 2
+
+      .main-contact
+        p Поддержка:
+        ul
+          li
+            a(href="mailto:support@livebanner.ru" target="_blank")
+              img(src="/assets/img/email.svg" alt="Email")
+              span support@livebanner.ru
+          li
+            a(href="https://vk.com/livebanner" target="_blank")
+              img(src="/assets/img/vk.svg" alt="VK")
+              span vk.com/livebanner
+

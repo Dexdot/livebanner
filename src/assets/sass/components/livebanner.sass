@@ -1,0 +1,140 @@
+.main
+  z-index: 1
+  position: relative
+  width: 100%
+  min-height: 100vh
+
+.main-video
+  position: fixed
+  width: 100vw
+  height: 100vh
+
+.main-video__inner
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  object-fit: cover
+  background: #1a1a1b
+
+.main-content
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  text-align: center
+
+  width: 100%
+  padding: 18vh 16px 48px
+
+.main-logo
+  display: block
+  width: 180px
+  height: 180px
+  margin-bottom: 16px
+
+  @media (max-width: 500px)
+    width: 120px
+    height: 120px
+
+.main-description
+  line-height: 1.2
+  color: #fff
+  +norms(m)
+  +yo('font-size', (375px: 18px, 1300px: 20px, 1920px: 26px))
+
+  margin-bottom: 16px
+
+.main-link
+  transition: $trs
+  background: $acc
+  border-radius: 8px
+
+  padding: 8px 12px
+  width: 200px
+  display: block
+
+  +link(#fff)
+  +norms(m)
+  font-size: 18px
+
+  &:hover
+    background: darken($acc, 3%)
+
+.example-videos
+  display: flex
+  align-items: center
+  justify-content: center
+
+  width: 100%
+  padding: 80px 0
+  margin-left: -24px
+
+  @media (max-width: 600px)
+    flex-direction: column
+
+.example-video
+  width: 320px
+  margin-top: 16px
+  margin-left: 24px
+
+  @media (max-width: 600px)
+    width: 100%
+    max-width: 320px
+
+.example-video__inner
+  width: 100%
+  margin-bottom: 8px
+  position: relative
+
+  &::before
+    content: ''
+    display: block
+    width: 100%
+    padding-top: 56.25%
+
+  iframe
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+.example-video__title
+  text-align: left
+  color: #fff
+
+.main-contact
+  > p
+    line-height: 1.2
+    color: #fff
+    +norms(m)
+    +yo('font-size', (1300px: 16px, 1920px: 22px))
+    margin-bottom: 16px
+
+  > ul
+    display: flex
+    align-items: center
+    margin-left: -32px
+    margin-top: -4px
+
+    @media (max-width: 500px)
+      flex-direction: column
+
+    > li
+      margin-left: 32px
+      margin-top: 4px
+
+    a
+      display: flex
+      align-items: center
+      +link(#fff)
+
+      img
+        width: 24px
+        height: 24px
+        object-fit: contain
+        margin-right: 8px
+
+
